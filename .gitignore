@@ -1,2 +1,4 @@
 open_tests/
 test.cnf
+.idea/
+*.swp
