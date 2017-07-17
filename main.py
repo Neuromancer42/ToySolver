@@ -59,7 +59,7 @@ class Formula:
         if dom not in self.unit_by_dom:
             self.unit_by_dom[dom] = {}
         if var in self.unit_to_dom:
-            d = self.unit_by_dom[var]
+            d = self.unit_to_dom[var]
             return (self.unit_by_dom[d][var] == assign)
         else:
             self.unit_to_dom[var] = dom
@@ -109,7 +109,7 @@ class Formula:
                 cls.not_assigned.add(v)
 
             self.unassigned.add(v)
-            self.num_sat -= len(self.occ[ov][oa])
+            self.num_sat -= len(self.occ[v][a])
 
             # if the assignment generate units or is a unit
             # the records need cleanign
